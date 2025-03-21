@@ -1,0 +1,67 @@
+/* Container for the gallery */
+.gallery-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title for the gallery */
+.gallery-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Gallery wrapper (makes the gallery scrollable horizontally) */
+.image-gallery {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    gap: 15px; /* Space between images */
+    padding-bottom: 10px; /* Adds space at the bottom of the gallery */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Style for each image in the gallery */
+.gallery-image {
+    width: 300px; /* Fixed image width */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+/* Zoom effect on hover */
+.gallery-image:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    cursor: pointer;
+}
+
+/* Hide scrollbar (optional, for cleaner UI) */
+.image-gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.image-gallery {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Responsive Design (Mobile View) */
+@media (max-width: 768px) {
+    .gallery-image {
+        width: 250px; /* Smaller images for mobile */
+    }
+}
+
+@media (max-width: 500px) {
+    .gallery-image {
+        width: 200px; /* Even smaller images for smaller screens */
+    }
+}

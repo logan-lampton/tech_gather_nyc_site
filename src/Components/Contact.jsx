@@ -1,5 +1,5 @@
-import React from 'react'
-import { useState } from "react";
+import React, { useState } from "react";
+import "../Styles/Contact.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -32,50 +32,28 @@ const Contact = () => {
   };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "auto", padding: "20px", border: "1px solid #ccc", borderRadius: "8px", backgroundColor: "#fff" }}>
-      <h2 style={{ textAlign: "center" }}>Contact Us</h2>
+    <div className="contact-form-container">
+      <h2>Contact Us</h2>
       <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: "10px" }}>
+        <div className="form-group">
           <label>Name</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            style={{ width: "100%", padding: "8px", marginTop: "4px", border: "1px solid #ccc", borderRadius: "4px" }}
-          />
-          {errors.name && <p style={{ color: "red", fontSize: "12px" }}>{errors.name}</p>}
+          <input type="text" name="name" value={formData.name} onChange={handleChange} />
+          {errors.name && <p className="error-message">{errors.name}</p>}
         </div>
 
-        <div style={{ marginBottom: "10px" }}>
+        <div className="form-group">
           <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            style={{ width: "100%", padding: "8px", marginTop: "4px", border: "1px solid #ccc", borderRadius: "4px" }}
-          />
-          {errors.email && <p style={{ color: "red", fontSize: "12px" }}>{errors.email}</p>}
+          <input type="email" name="email" value={formData.email} onChange={handleChange} />
+          {errors.email && <p className="error-message">{errors.email}</p>}
         </div>
 
-        <div style={{ marginBottom: "10px" }}>
+        <div className="form-group">
           <label>Message</label>
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            style={{ width: "100%", padding: "8px", marginTop: "4px", border: "1px solid #ccc", borderRadius: "4px", height: "100px" }}
-          ></textarea>
-          {errors.message && <p style={{ color: "red", fontSize: "12px" }}>{errors.message}</p>}
+          <textarea name="message" value={formData.message} onChange={handleChange}></textarea>
+          {errors.message && <p className="error-message">{errors.message}</p>}
         </div>
 
-        <button
-          type="submit"
-          style={{ width: "100%", padding: "10px", backgroundColor: "#007BFF", color: "white", border: "none", borderRadius: "4px", cursor: "pointer" }}
-        >
-          Send Message
-        </button>
+        <button type="submit" className="submit-button">Send Message</button>
       </form>
     </div>
   );

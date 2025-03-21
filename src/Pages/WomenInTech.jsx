@@ -6,7 +6,11 @@ const WomenInTech = () => {
   return (
     <div>
       <ImageSection />
-      <Description />
+      <Description
+        title="Women in Tech Gather NYC"
+        intro="Insert awesome intro!"
+        details="Insert fantastic details!"
+      />
     </div>
   )
 }

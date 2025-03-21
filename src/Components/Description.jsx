@@ -1,18 +1,16 @@
-import React from 'react'
+import React from 'react';
+import "../Styles/Description.css";
 
-const Description = () => {
+const Description = ({ title, intro, details }) => {
   return (
-    <div>
-      <h1>Welcome to tech gather</h1>
+    <div className="description-container">
+      <h1 className="heading">{title}</h1>
 
-      <p>Tech Gather NYC is a mixer for anyone and everyone in NYC Tech.</p>
+      <p className="intro">{intro}</p>
 
-      <p>New to Tech? Welcome!
-        15 years in? Come on down!
-        Just got to the city? Get to know the techies here!
-        Been here forever? Grab your "Pizza Rat" headband and welcome the newbies.</p>
+      <p className="details">{details}</p>
     </div>
-  )
+  );
 }
 
-export default Description
+export default Description;

@@ -1,0 +1,69 @@
+/* Contact Form Container */
+.contact-form-container {
+    max-width: 400px;
+    margin: 80px auto; /* Large margin on top */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+/* Form Title */
+.contact-form-container h2 {
+    text-align: center;
+}
+
+/* Form Group (Each Label + Input) */
+.form-group {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input and Textarea Styling */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Textarea Specific Styling */
+.form-group textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Error Messages */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* Submit Button */
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Button Hover Effect */
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .contact-form-container {
+        width: 90%;
+    }
+}

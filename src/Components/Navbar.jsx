@@ -1,11 +1,9 @@
 import React from 'react'
 import { Link, useLocation } from "react-router-dom";
-
-// Make Home appear conditionally on the navbar
+import "../Styles/Navbar.css";
 
 const Navbar = () => {
   const location = useLocation();
-
 
   return (
     <nav class="navbar">
