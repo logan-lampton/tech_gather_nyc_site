@@ -1,8 +1,13 @@
 import React from 'react'
+import ImageSection from '../Components/ImageSection'
+import Description from '../Components/Description'
 
 const WomenInTech = () => {
   return (
-    <div>WomenInTech</div>
+    <div>
+      <ImageSection />
+      <Description />
+    </div>
   )
 }
 

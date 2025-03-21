@@ -1,16 +1,32 @@
-import React from 'react'
-import Contact from '../Components/Contact'
-import SocialMedia from '../Components/SocialMedia'
-import Description from '../Components/Description'
+import React from 'react';
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import ImageSection from '../Components/ImageSection';
+import Description from '../Components/Description';
+import SocialMedia from '../Components/SocialMedia';
+import Contact from '../Components/Contact';
 
 const Home = () => {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const element = document.getElementById(location.hash.replace("#", ""));
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location])
+
+
+
   return (
     <div>
-      <>
-        <Description />
-        <SocialMedia />
-      </>
-      <Contact />
+      <ImageSection />
+      <Description />
+      <SocialMedia />
+      <div id="contact" style={{ marginTop: "500px" }}>
+        <Contact />
+      </div>
     </div>
   )
 }

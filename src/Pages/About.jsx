@@ -1,8 +1,11 @@
 import React from 'react'
+import AboutBios from '../Components/AboutBios'
 
 const About = () => {
   return (
-    <div>DIANA, LOGAN , AMI</div>
+    <div>
+      <AboutBios />
+    </div>
   )
 }
 

@@ -3,7 +3,7 @@ import React from 'react'
 const Description = () => {
   return (
     <div>
-      <h1>welcome to tech gather</h1>
+      <h1>Welcome to tech gather</h1>
 
       <p>Tech Gather NYC is a mixer for anyone and everyone in NYC Tech.</p>
 
