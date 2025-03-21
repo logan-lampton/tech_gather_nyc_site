@@ -1,16 +1,18 @@
 import React from 'react'
+import { Link, useLocation } from "react-router-dom";
 
 // Make Home appear conditionally on the navbar
 
 const Navbar = () => {
+  const location = useLocation();
+
+
   return (
-    <nav>
-      <ul class="navbar">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/womenintech">Women in Tech</a></li>
-        <li><a href="/#contact">Contact</a></li>
-      </ul>
+    <nav class="navbar">
+      {location.pathname !== "/" && <Link to="/">Home</Link>}
+      <Link to="/about">About</Link>
+      <Link to="/womenintech">Women in Tech</Link>
+      <Link to="/#contact">Contact</Link>
     </nav>
 
   )
