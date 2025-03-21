@@ -1,16 +1,16 @@
 import React from 'react'
 import Contact from '../Components/Contact'
-import SocialMedias from '../Components/SocialMedias'
+import SocialMedia from '../Components/SocialMedia'
 import Description from '../Components/Description'
 
 const Home = () => {
   return (
     <div>
-        <>
-        <Description/>
-        <SocialMedias/>
-        </>
-        <Contact/>
+      <>
+        <Description />
+        <SocialMedia />
+      </>
+      <Contact />
     </div>
   )
 }
